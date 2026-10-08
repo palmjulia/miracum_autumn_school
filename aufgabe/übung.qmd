@@ -1,0 +1,50 @@
+---
+title: "Übung"
+format: pdf
+---
+
+# Abschlussaufgabe: Mini-ETL mit fhircrackr
+
+
+**Ziel:** Lade Observations vom Server, verflache sie zu einer Tabelle und beantworte: *Wie viele Zeilen hat deine Tabelle, und wie viele verschiedene Patient:innen sind enthalten?*
+
+**Server:** `https://mii-agiop-3p.life.uni-leipzig.de/blaze`
+
+### Teil 1
+
+1. Baue einen Search Request für Observations mit dem LOINC-Code `718-7` (Hämoglobin). Der Suchparameter `code` erwartet das Format `system|code`.
+2. Lade maximal 3 Bundles herunter.
+3. Definiere eine Table Description mit diesen Spalten:
+
+| Spaltenname | Element                                                      |
+|-------------|--------------------------------------------------------------|
+| `id`        | Ressourcen-ID                                                |
+| `patient`   | Referenz auf das Subject                                     |
+| `loinc`     | LOINC-Code (nur das LOINC-Coding, siehe XPath-Filter aus den Folien) |
+| `wert`      | Zahlenwert der Messung                                       |
+| `einheit`   | Einheit der Messung                                          |
+| `datum`     | Zeitpunkt der Messung                                        |
+
+4. Verflache die Bundles mit `fhir_crack()` und schau dir das Ergebnis an (`View()`, `nrow()`).
+
+::: {.callout-tip}
+Die Elemente heißen `subject/reference`, `valueQuantity/value`, `valueQuantity/unit` und `effectiveDateTime`. Bei Fragen zu Funktionen hilft `?fhir_table_description`.
+:::
+
+### Teil 2
+
+Wie viele verschiedene Patient:innen sind in deiner Tabelle?
+
+::: {.callout-tip}
+`$` greift auf eine Spalte zu, `unique()` und `length()` helfen beim Zählen.
+:::
+
+### Teil 3
+
+Lade zusätzlich die zugehörigen Patient-Ressourcen (z. B. per POST mit `_id`, siehe Folien) und verknüpfe beide Tabellen über die Patienten-ID (`merge()`).
+
+::: {.callout-tip}
+- Die Referenzen in `obs$patient` haben die Form `Patient/<id>`. Das Präfix muss entfernt werden, bevor die IDs an `_id` übergeben werden können (siehe `?sub`).
+- `_id` erwartet mehrere IDs als einen kommagetrennten String, verwende `paste(..., collapse = ",")`.
+- `merge()` verknüpft zwei Tabellen über die Argumente `by.x` und `by.y`.
+:::
