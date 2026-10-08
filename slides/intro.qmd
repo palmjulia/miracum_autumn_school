@@ -21,7 +21,8 @@ editor_options:
 -   Voraussetzung:
     -   R und RStudio installiert
     -   Internetzugang
-
+    -   Materialien im GitHub Repo: [https://github.com/palmjulia/miracum_autumn_school](https://github.com/palmjulia/miracum_autumn_school)
+    
 ## Was ist der fhircrackr?
 
 -   R-Paket zum Verarbeiten von HL7 FHIR Ressourcen
