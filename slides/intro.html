@@ -244,7 +244,7 @@ Julia Palm
 <h2>Play along: Code-Beispiele</h2>
 <div style="font-size: 0.7em;">
 <ul>
-<li class="fragment"><em>fhircrackr_intro.R</em> durch Doppelklick in RStudio öffnen</li>
+<li class="fragment"><em>intro.R</em> durch Doppelklick in RStudio öffnen</li>
 <li class="fragment">Code kann zeilenweise oder im Block ausgeführt werden</li>
 </ul>
 </div>
@@ -283,7 +283,7 @@ Julia Palm
 </section>
 <section id="fhir-search-requests" class="slide level2">
 <h2>FHIR Search Requests</h2>
-<p><em>Beispiel:</em> Weibliche Patieten mit Geburtsjahr nach 1990</p>
+<p><em>Beispiel:</em> Weibliche Patienten mit Geburtsjahr nach 1990</p>
 <p><code>https://mii-agiop-3p.life.uni-leipzig.de/blaze/</code>&nbsp; <code>Patient?gender=female&amp;birthdate=gt1990</code></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2" data-code-line-numbers="1-2|3|4-5|7-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="co">#FHIR Search Request zusammenbauen</span></span>
@@ -319,11 +319,11 @@ Julia Palm
 A fhir_bundle_xml object
 No. of entries : 50
 Self Link: https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient?gender=female&amp;birthdate=gt1990&amp;_count=50
-Next Link: https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient/__page/AQAAH5JHXzrh18b2nzAXxeUdKNzJM_cdNaqMmA2kZca4HCiN-VUic8ZZ9QN-RuOh6bVx5sJIIt1ZlABV4oo6uC1n3pnXr9f74LC8ItOSIe76SssNkalVT5cjXiUgp7Mp08BjzdXXB6LyhK3FKIMXss6vQM4s6Q
+Next Link: https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient/__page/AQAAICFUgAYi27KlyeFAIDWLVAqd8IhXlNRWSb1liqrYq2PQvMyc9JgRjSHZyMBuakJXtLKTdCsDlPAzD24LPYeL3cIUDPEKPQ1IMjzA2Nq03riBdg9sPLZ3npEu8O69ADbQ90tfmF1qHPKgxxiP7A30ZYYm0Q
  
 {xml_node}
 &lt;Bundle&gt;
- [1] &lt;id value="DII3UYTNW64SNUD4"/&gt;
+ [1] &lt;id value="DIKZFSWWU7SJ5B5B"/&gt;
  [2] &lt;type value="searchset"/&gt;
  [3] &lt;link&gt;\n  &lt;relation value="first"/&gt;\n  &lt;url value="https://mii-agiop-3p. ...
  [4] &lt;link&gt;\n  &lt;relation value="self"/&gt;\n  &lt;url value="https://mii-agiop-3p.l ...
@@ -348,11 +348,11 @@ Next Link: https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient/__page/AQAAH5J
 [[2]]
 A fhir_bundle_xml object
 No. of entries : 50
-Next Link: https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient/__page/AQAAH5KltZEGAlBMOXEf9CorNKX2h8Cux_LMAMvoEJKd3-oLKP9gL_dAJ7gyNCkr86FZAsClNAy9ymJgXNxwtIxfMu1cx2zqozPEevfI6I4jfD8yaRjqMDNwAfxmnwcxb53LrMnAHzwZNNfVhnqILAMEi9E1Bw
+Next Link: https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient/__page/AQAAICFxTLtyHCdNgCuvqHRqx5yKej2KMnLaH0YzxPDb8OdwPYWwRJk315ZvxGVDPH8g_6sqsox7VGrMLXC3Vlv1qzCoXFGzbkDjUEfQhvjT0_KN-k3TVuyY-0xWNuKLCiRmUK96Yom3En1uQyYr9OGS3_wKIQ
  
 {xml_node}
 &lt;Bundle&gt;
- [1] &lt;id value="DII3UYTY6OSJW7ZW"/&gt;
+ [1] &lt;id value="DIKZFSXA7SCSK4K6"/&gt;
  [2] &lt;type value="searchset"/&gt;
  [3] &lt;link&gt;\n  &lt;relation value="first"/&gt;\n  &lt;url value="https://mii-agiop-3p. ...
  [4] &lt;link&gt;\n  &lt;relation value="next"/&gt;\n  &lt;url value="https://mii-agiop-3p.l ...
@@ -385,11 +385,11 @@ Next Link: https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient/__page/AQAAH5K
 <div class="cell fragment">
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;Bundle&gt;
-  &lt;id value="DII3UYTNW64SNUD4"/&gt;
+  &lt;id value="DIKZFSWWU7SJ5B5B"/&gt;
   &lt;type value="searchset"/&gt;
   &lt;link&gt;
     &lt;relation value="first"/&gt;
-    &lt;url value="https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient/__page/AQAAH5Iir511jv1pIZHeERBF5lECE8WxN9USqVU4mlzO--nvVSScCsrKLnDmCJ-kn4FJMdzSZF_lX9Pqhfbzi5-gap-UA7XzRV7VCfDx13_EBFd0k9I7minq"/&gt;
+    &lt;url value="https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient/__page/AQAAICGMh8p8vPGFJ1J029nmSOm1uHyOk_393zNXJlfJmGT6xANpdRiAd56TB5EGM8l8z8iBsDsRMYRTcd0ufSRd_rdfN9sebA7deYvx5mlGzhK98ZxBblqX"/&gt;
   &lt;/link&gt;
   &lt;link&gt;
     &lt;relation value="self"/&gt;
@@ -397,7 +397,7 @@ Next Link: https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient/__page/AQAAH5K
   &lt;/link&gt;
   &lt;link&gt;
     &lt;relation value="next"/&gt;
-    &lt;url value="https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient/__page/AQAAH5JHXzrh18b2nzAXxeUdKNzJM_cdNaqMmA2kZca4HCiN-VUic8ZZ9QN-RuOh6bVx5sJIIt1ZlABV4oo6uC1n3pnXr9f74LC8ItOSIe76SssNkalVT5cjXiUgp7Mp08BjzdXXB6LyhK3FKIMXss6vQM4s6Q"/&gt;
+    &lt;url value="https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient/__page/AQAAICFUgAYi27KlyeFAIDWLVAqd8IhXlNRWSb1liqrYq2PQvMyc9JgRjSHZyMBuakJXtLKTdCsDlPAzD24LPYeL3cIUDPEKPQ1IMjzA2Nq03riBdg9sPLZ3npEu8O69ADbQ90tfmF1qHPKgxxiP7A30ZYYm0Q"/&gt;
   &lt;/link&gt;
   &lt;entry&gt;
     &lt;fullUrl value="https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient/Polar-WP1.1-00042"/&gt;
@@ -2509,11 +2509,11 @@ type: application/x-www-form-urlencoded</code></pre>
 A fhir_bundle_xml object
 No. of entries : 50
 Self Link: https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient?gender=female&amp;birthdate=gt1990&amp;_count=50
-Next Link: https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient/__page/AQAAH5Lm-kUA4N65bCEduOb6iY0lulv8SzP-xV7TLSVhl92bHt-YQUeRKHlmReIm7mUqFUIX43o2bw9q-Yb790kQL3v9jw2rxr7z1LShkccTXSQuqVp2FkR5NMekKouf3ITEWpoPUUQFLbXE7RmXWyYKy-TLOH0LaKnSQEE
+Next Link: https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient/__page/AQAAICFKjYan0lvHc9iV3tvHmrdk2VMEdBnTfyqFWlNA-HVUa9XyfwwqswoQ98Dg9B8_E4p-7qLL4_FpWKIwJUfkugPCCwe6rQOns-aSCLUNpNXJxE3SvQJ6DzUie_1F2SjdtHFpb_iddnWxM5q2vbM5YmkA5eLr7l81zGk
  
 {xml_node}
 &lt;Bundle&gt;
- [1] &lt;id value="DII3UYUN7O5EC24X"/&gt;
+ [1] &lt;id value="DIKZFSXVEK7FKIEL"/&gt;
  [2] &lt;type value="searchset"/&gt;
  [3] &lt;link&gt;\n  &lt;relation value="first"/&gt;\n  &lt;url value="https://mii-agiop-3p. ...
  [4] &lt;link&gt;\n  &lt;relation value="self"/&gt;\n  &lt;url value="https://mii-agiop-3p.l ...
@@ -2538,11 +2538,11 @@ Next Link: https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient/__page/AQAAH5L
 [[2]]
 A fhir_bundle_xml object
 No. of entries : 50
-Next Link: https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient/__page/AQAAH5KpapKsiYK3JKxO7MRGsaXDd2HKwMp0yXl-EmJ8Mjk0VwoLlxYVl15cePhGgthEPXq6f9rQ898ZZJYl8OpHO8rndx7SFdJIrnK3SpbHI2y7M9yuioMCQsX3ltAMoGMN0AGzxrUc6STMl8wsj9O9PKu83bFybHqE-oQ
+Next Link: https://mii-agiop-3p.life.uni-leipzig.de/blaze/Patient/__page/AQAAICFz4CguTnK9JmIMkYsMZmAPCn01ozSyFp6FwWbkvQ5fw0-IFz60CRHsFWZzsTxXh0XclUhLI-xlxdukAGc2MvK5R_a2-FKMhXdjD7lP11OTtUpFOr4gyZeAeh2UiaHhr9OoSJTs6ZCh6r5L93fq6ghwHCL4GU-dCXE
  
 {xml_node}
 &lt;Bundle&gt;
- [1] &lt;id value="DII3UYUYV5KCVWTA"/&gt;
+ [1] &lt;id value="DIKZFSX5YQL726WH"/&gt;
  [2] &lt;type value="searchset"/&gt;
  [3] &lt;link&gt;\n  &lt;relation value="first"/&gt;\n  &lt;url value="https://mii-agiop-3p. ...
  [4] &lt;link&gt;\n  &lt;relation value="next"/&gt;\n  &lt;url value="https://mii-agiop-3p.l ...
@@ -3548,8 +3548,8 @@ keep_attr:     FALSE</code></pre>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href=""></a>obs_desc <span class="ot">&lt;-</span> <span class="fu">fhir_table_description</span>(<span class="at">resource =</span> <span class="st">"Observation"</span>,</span>
 <span id="cb26-2"><a href=""></a>                                   <span class="at">cols =</span> <span class="fu">c</span>(</span>
 <span id="cb26-3"><a href=""></a>                                     <span class="at">id =</span> <span class="st">"id"</span>,</span>
-<span id="cb26-4"><a href=""></a>                                     <span class="at">code =</span> <span class="st">"code/coding/code"</span>,</span>
-<span id="cb26-5"><a href=""></a>                                     <span class="at">system =</span> <span class="st">"code/coding/system"</span></span>
+<span id="cb26-4"><a href=""></a>                                     <span class="at">code.coding.code =</span> <span class="st">"code/coding/code"</span>,</span>
+<span id="cb26-5"><a href=""></a>                                     <span class="at">code.coding.system =</span> <span class="st">"code/coding/system"</span></span>
 <span id="cb26-6"><a href=""></a>                                     ),</span>
 <span id="cb26-7"><a href=""></a>                                   <span class="at">format =</span> <span class="st">"wide"</span>,</span>
 <span id="cb26-8"><a href=""></a>                                   <span class="at">brackets =</span> <span class="fu">c</span>(<span class="st">"["</span>, <span class="st">"]"</span>)</span>
@@ -3565,10 +3565,10 @@ keep_attr:     FALSE</code></pre>
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">[1]id</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">[1.1.1]code</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">[1.2.1]code</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">[1.1.1]system</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">[1.2.1]system</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">[1.1.1]code.coding.code</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">[1.2.1]code.coding.code</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">[1.1.1]code.coding.system</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">[1.2.1]code.coding.system</th>
 </tr>
 </thead>
 <tbody>

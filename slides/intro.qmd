@@ -38,7 +38,7 @@ editor_options:
 ## Play along: Code-Beispiele
 
 ::: {style="font-size: 0.7em;"}
--   *fhircrackr_intro.R* durch Doppelklick in RStudio öffnen
+-   *intro.R* durch Doppelklick in RStudio öffnen
 -   Code kann zeilenweise oder im Block ausgeführt werden
 :::
 
@@ -83,7 +83,7 @@ Code markieren und `Strg + Enter` drücken.
 
 ## FHIR Search Requests
 
-*Beispiel:* Weibliche Patieten mit Geburtsjahr nach 1990
+*Beispiel:* Weibliche Patienten mit Geburtsjahr nach 1990
 
 `https://mii-agiop-3p.life.uni-leipzig.de/blaze/`\ 
 `Patient?gender=female&birthdate=gt1990`
@@ -340,8 +340,8 @@ knitr::kable(observations)|>
 obs_desc <- fhir_table_description(resource = "Observation",
                                    cols = c(
                                      id = "id",
-                                     code = "code/coding/code",
-                                     system = "code/coding/system"
+                                     code.coding.code = "code/coding/code",
+                                     code.coding.system = "code/coding/system"
                                      ),
                                    format = "wide",
                                    brackets = c("[", "]")

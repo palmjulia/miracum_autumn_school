@@ -111,8 +111,8 @@ View(observations)
 obs_desc <- fhir_table_description(resource = "Observation",
                                    cols = c(
                                      id = "id",
-                                     code = "code/coding/code",
-                                     system = "code/coding/system"
+                                     code.coding.code = "code/coding/code",
+                                     code.coding.system = "code/coding/system"
                                      ),
                                    format = "wide",
                                    brackets = c("[", "]")
