@@ -8,7 +8,7 @@ format: pdf
 
 **Ziel:** Lade Observations vom Server, verflache sie zu einer Tabelle und beantworte: *Wie viele Zeilen hat deine Tabelle, und wie viele verschiedene Patient:innen sind enthalten?*
 
-**Server:** `https://mii-agiop-3p.life.uni-leipzig.de/blaze`
+**Server:** `https://hapi.fhir.org/baseR4`
 
 ### Teil 1
 

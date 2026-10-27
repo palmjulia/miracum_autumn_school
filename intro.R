@@ -9,7 +9,7 @@ library(fhircrackr)
 ##### FHIR Herunterladen #####
 
 #FHIR Search Request zusammenbauen
-request <- fhir_url(url = "https://mii-agiop-3p.life.uni-leipzig.de/blaze",
+request <- fhir_url(url = "https://hapi.fhir.org/baseR4",
                     resource = "Patient",
                     parameters = c(gender = "female",
                                    birthdate = "gt1990"))
@@ -31,7 +31,7 @@ cat(toString(bundles[[1]]))
 ?fhir_search
 
 ### Ressourcen herunterladen per POST
-request <- fhir_url(url = "https://mii-agiop-3p.life.uni-leipzig.de/blaze",
+request <- fhir_url(url = "https://hapi.fhir.org/baseR4",
                     resource = "Patient")
 
 #body definieren
@@ -47,8 +47,8 @@ bundles
 
 ### Umgang mit HTTP-Fehlern
 
-#Fehlende Authentifizierung
-fhir_search("https://mii-agiop-polar.life.uni-leipzig.de/blaze/Patient", 
+#Falscher Suchparameter
+fhir_search("https://hapi.fhir.org/baseR4/Patient?date=2025", 
             stop_on_error = 1)
 
 #Fehler aufrufen

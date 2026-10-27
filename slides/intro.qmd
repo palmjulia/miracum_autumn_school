@@ -12,7 +12,25 @@ editor_options:
   chunk_output_type: console
 ---
 
-# Begrüßung
+## Kurz zu mir, kurz zu euch {.nonincremental}
+
+::: {.columns}
+::: {.column width="45%"}
+**Dr. Julia Palm**
+
+-   Institut für medizinische Statistik, Informatik und Datenwissenschaften Jena
+-   Biometrie, Statistik, klinische Studien im MII Kontext
+-   Entwicklung des `fhircrackr` 
+:::
+
+::: {.column width="55%"}
+**Und ihr?**
+
+-   Wer hat schon mit R gearbeitet?
+-   Welche Sprachen nutzt ihr sonst? 
+:::
+:::
+
 
 ## Inhalt des Workshops
 
@@ -85,7 +103,7 @@ Code markieren und `Strg + Enter` drücken.
 
 *Beispiel:* Weibliche Patienten mit Geburtsjahr nach 1990
 
-`https://mii-agiop-3p.life.uni-leipzig.de/blaze/`\ 
+`https://hapi.fhir.org/baseR4/`\ 
 `Patient?gender=female&birthdate=gt1990`
 
 
@@ -94,7 +112,7 @@ Code markieren und `Strg + Enter` drücken.
 #| output-location: fragment
 
 #FHIR Search Request zusammenbauen
-request <- fhir_url(url = "https://mii-agiop-3p.life.uni-leipzig.de/blaze",
+request <- fhir_url(url = "https://hapi.fhir.org/baseR4",
                     resource = "Patient",
                     parameters = c(gender = "female",
                                    birthdate = "gt1990"))
@@ -144,7 +162,7 @@ cat(toString(bundles[[1]]))
 ```{r}
 #| output-location: fragment
 #| code-line-numbers: "1-2|4-7" 
-request <- fhir_url(url = "https://mii-agiop-3p.life.uni-leipzig.de/blaze",
+request <- fhir_url(url = "https://hapi.fhir.org/baseR4",
                     resource = "Patient")
 
 #body definieren
@@ -175,8 +193,8 @@ bundles
 ```{r}
 #| output-location: fragment
 #| error: true
-#Fehlende Authentifizierung
-fhir_search("https://mii-agiop-polar.life.uni-leipzig.de/blaze/Patient", 
+#Falscher Suchparameter
+fhir_search("https://hapi.fhir.org/baseR4/Patient?date=2025", 
             stop_on_error = 1)
 ```
 

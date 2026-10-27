@@ -4,7 +4,7 @@ library(fhircrackr)
 
 #Search Request bauen
 request <- fhir_url(
-  url = "https://mii-agiop-3p.life.uni-leipzig.de/blaze",
+  url = "https://hapi.fhir.org/baseR4",
   resource = "Observation",
   parameters = c(code = "http://loinc.org|718-7")
 )
@@ -46,7 +46,7 @@ length(pat_ids)
 
 ### Teil 3 ###
 #search request
-request <- fhir_url(url = "https://mii-agiop-3p.life.uni-leipzig.de/blaze",
+request <- fhir_url(url = "https://hapi.fhir.org/baseR4",
                     resource = "Patient")
 
 #"Patient/" vor jeder Pat-ID muss gelöscht werden
